@@ -128,4 +128,10 @@
         font-size: large;
         padding: 5mm;
     }
+
+    .about_me_container_content {
+        padding-left: 20px;
+        text-decoration: underline;
+        color: #C35F5F;
+    }
 }
