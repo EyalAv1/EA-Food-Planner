@@ -58,6 +58,8 @@ function App() {
   
   // FirebaseDataHandler(setData);
 
+  //test if it works
+
   // const userCurrentCalories = data.filter((meal) => meal.isChecked).reduce((acc, o) => acc + parseInt(o.calories), 0);
   const router = createBrowserRouter([
     {
