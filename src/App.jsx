@@ -57,9 +57,6 @@ function App() {
   // },[fb_auth.currentUser])
   
   // FirebaseDataHandler(setData);
-  
-
-// console.log(data);
 
   // const userCurrentCalories = data.filter((meal) => meal.isChecked).reduce((acc, o) => acc + parseInt(o.calories), 0);
   const router = createBrowserRouter([
