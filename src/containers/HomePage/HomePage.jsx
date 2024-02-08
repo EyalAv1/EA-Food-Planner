@@ -1,10 +1,10 @@
-// import classes from '../HomePage/HomePage.module.css';
+import classes from './HomePage.module.css';
 import { Link } from 'react-router-dom';
 
 function HomePage() {
     return (
         <>
-            {/* <div className={classes.cintainer}>
+            <div className={classes.cintainer}>
                 <div className={classes.container_content}>
                     <div className={classes.container_content_p}>
                         <h1>Lets Build Your Path To Healthy Life</h1>
@@ -30,7 +30,7 @@ function HomePage() {
                     Have fun 🔥💪🏽
                 </p>
                 </div>    
-            </div> */}
+            </div>
         </>
     );
 }
