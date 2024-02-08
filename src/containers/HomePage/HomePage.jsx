@@ -1,4 +1,4 @@
-import classes from './HomePage.module.css';
+import classes from '../HomePage/HomePage.module.css';
 import { Link } from 'react-router-dom';
 
 function HomePage() {
