@@ -22,8 +22,6 @@ function App() {
   // const { dailyCalories } = useGetDailyCalories();
   // const { userID } = useGetUserInfo()
 
-  // console.log(dailyCalories);
-
   
   // const totalCalories = dailyCalories.find(obj => {return obj.userId == userID})
 
