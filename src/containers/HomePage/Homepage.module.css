@@ -2,7 +2,7 @@
     margin-top: 0%;
     width:100%;
     height: 550px;
-    background-image: url('src/assets/banner-home-page.png');
+    /* background-image: url('src/assets/banner-home-page.png'); */
     background-size: cover;
     border-radius: 1rem;
     box-shadow: 0 0 25px 0 rgba(0,0,0,1) inset;
