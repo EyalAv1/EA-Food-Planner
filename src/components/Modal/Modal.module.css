@@ -1,0 +1,106 @@
+.modal {
+    position: absolute;
+    width: 70%;
+    max-width: 700px;
+    height: 400px;
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    z-index: 92;
+    justify-content: center;
+    opacity: 0.5;
+    transform: translateY(-100vh);
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.showModal {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.closeBtn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.closeBtn span {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+    color: black;
+    transition: transform 0.2s ease;
+}
+
+.closeBtn span:hover {
+    transform: scale(1.2);
+}
+
+.modalBody {
+    flex: 1;
+    background-color: #9C4545;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+@media (max-width:500px) {
+    .modal {
+        position: absolute;
+        width: 70%;
+        max-width: 700px;
+        height: 400px;
+        background-color: #fff;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        z-index: 92;
+        justify-content: center;
+        opacity: 0.5;
+        transform: translateY(-100vh);
+        transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+        /* margin-top: 100px; */
+    }
+    
+    .showModal {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    .closeBtn {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        cursor: pointer;
+    }
+    
+    .closeBtn span {
+        display: block;
+        font-size: 2rem;
+        font-weight: bold;
+        color: black;
+        transition: transform 0.2s ease;
+    }
+    
+    .closeBtn span:hover {
+        transform: scale(1.2);
+    }
+    
+    .modalBody {
+        flex: 1;
+        background-color: #9C4545;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+    }
+
+}

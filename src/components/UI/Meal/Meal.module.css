@@ -1,0 +1,191 @@
+/* @import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300'; */
+@import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700';
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One'); 
+
+body{
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight:700;
+    letter-spacing: 1px;
+}
+
+.mealOutline {
+    position:relative;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 950px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    /* font-family: 'Open Sans Condensed', sans-serif;
+    font-weight:700; */
+}
+
+/* .mealOutline:hover {
+    box-shadow: 0 1px 1px rgba(0,0,0,0.11), 0 2px 2px rgba(0,0,0,0.11), 0 4px 4px rgba(0,0,0,0.11), 0 6px 8px rgba(0,0,0,0.11), 0 8px 16px rgba(0,0,0,0.11);
+} */
+
+/* .closeBtn {
+    position: absolute;
+    top: 0;
+    right: 3px;
+    margin:-10px 0 -10px 0;
+    cursor: pointer;
+}
+
+.closeBtn span {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+    color: black;
+    transition: transform 0.2s ease;
+}
+
+.closeBtn span:hover {
+    transform: scale(1.2);
+} */
+
+.table_meal {
+    width:100%;
+}
+
+.closeBtnContainer{
+    justify-Content:right;
+    display: flex;
+    height:100%; 
+    padding-top:5px;
+}
+
+
+.divbtn {
+	height: 33.33%;
+    width: 50px; 
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+    justify-content: center;
+
+    /* position: absolute; */
+    /* top: 10px;
+    right: 3px; */
+    /* cursor: pointer; */
+    /* display: flex; */
+}
+
+.divbtn span{
+    font-size: medium;
+}
+
+.btn {
+	line-height: 11px;
+	height: 10px;
+	text-align: center;
+	width: 65px;
+	cursor: pointer;
+}
+
+
+.btn_two {
+	color: black;
+	transition: all 0.5s;
+	position: relative;	
+}
+.btn_two span {
+	z-index: 2;	
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;	
+}
+
+.btn_two::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	transition: all 0.5s;
+	/* border: 1px solid rgba(65, 65, 65, 0.2);
+	background-color: rgba(65, 65, 65,0); */
+
+    border-top-width: 1.5px;
+	border-bottom-width: 1.5px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-color: rgba(65, 65, 65, 0.2);
+	border-bottom-color: rgba(65, 65, 65, 0.2);
+}
+.btn_two::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	transition: all 0.5s;
+	/* border: 1px solid rgba(65, 65, 65,0.2);
+	background-color: rgba(65, 65, 65,0); */
+
+    border-top-width: 1.5px;
+	border-bottom-width: 1.5px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-color: rgba(65, 65, 65, 0.2);
+	border-bottom-color: rgba(65, 65, 65, 0.2);
+}
+.btn_two:hover::before {
+  transform: rotate(-45deg);
+  background-color: rgba(65, 65, 65,0.2);
+}
+.btn_two:hover::after {
+  transform: rotate(45deg);
+  background-color: rgba(65, 65, 65,0.2);
+}
+
+@media (max-width: 500px) {
+
+    .table_meal {
+        width:100%;
+    }
+    
+    .closeBtnContainer{
+        justify-Content:right;
+        display: flex;
+        height:100%; 
+        padding-top:5px;
+    }
+
+    /* .divbtn {
+        height: 33.33%;
+        width: 50px; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        position: absolute;
+        top: 10px;
+        right: 0px;
+        cursor: pointer;
+    } */
+
+    .divbtn {
+        height: 33.33%;
+        width: 50px; 
+        display: flex;
+    }
+
+    .mealOutline {
+        position:relative;
+        border-radius: 5px;
+        width: 90%;
+        max-width: 950px;
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+    }
+    
+}

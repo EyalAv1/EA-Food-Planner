@@ -1,0 +1,131 @@
+/* .banner {
+    width: 100%;
+    top: 4%;
+} */
+
+.cintainer {
+    margin-top: 0%;
+    width:100%;
+    height: 550px;
+    background-image: url('src/assets/banner-home-page.png');
+    background-size: cover;
+    border-radius: 1rem;
+    box-shadow: 0 0 25px 0 rgba(0,0,0,1) inset;
+    justify-content: center;
+    vertical-align: middle;
+}
+
+.container_content {
+    height: 90%;
+    position: relative;
+    justify-content: center;
+    vertical-align: middle;
+}
+
+.container_content_p {
+    /* position: absolute; */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    /* bottom: 0; */
+    text-align: center;
+    color: #B00D0D;
+    justify-content: center;
+    vertical-align: middle;
+
+    -webkit-text-stroke: 2px #670505;
+    text-shadow: 3px 3px 0.5rem white;
+    
+}
+
+.container_content_p h1 {
+    font-size: 400%;    
+}
+
+.text {
+    display: inline-flex;
+    align-items: center; 
+    font-size: x-large;
+    padding: 5mm;
+}
+
+.text:hover {
+    border-radius: 1rem;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.9), 0 10px 10px rgba(0,0,0,0.85);
+}
+
+.cintainer a {
+    color: inherit;
+    -webkit-text-stroke: 2px #670505;
+    text-decoration: none;
+}
+
+.about_me_outline {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4), 0px 7px 13px -3px rgba(0, 0, 0, 0.3), inset 0px -3px 0px rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 1rem;
+}
+
+.about_me_container {
+    width: 80%;
+    align-items: center;
+    text-align: left;
+    padding-left: 20px;
+ }
+
+.about_me_container_content {
+    padding-left: 20px;
+    text-decoration: underline;
+    color: #C35F5F;
+}
+
+@media (max-width: 500px) {
+    .cintainer {
+        margin-top: 50px;
+        width:100%;
+        height: 300px;
+        background-image: url('src/assets/banner-home-page.png');
+        background-size: cover;
+        border-radius: 1rem;
+        box-shadow: 0 0 25px 0 rgba(0,0,0,1) inset;
+        justify-content: center;
+        vertical-align: middle;
+    }
+    
+    .container_content {
+        height: 90%;
+        position: relative;
+        justify-content: center;
+        vertical-align: middle;
+    }
+    
+    .container_content_p {
+        /* position: absolute; */
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        /* bottom: 0; */
+        text-align: center;
+        color: #B00D0D;
+        justify-content: center;
+        vertical-align: middle;
+    
+        -webkit-text-stroke: 2px #670505;
+        text-shadow: 3px 3px 0.5rem white;
+        
+    }
+    
+    .container_content_p h1 {
+        font-size: 230%;    
+    }
+    
+    .text {
+        display: inline-flex;
+        align-items: center; 
+        font-size: large;
+        padding: 5mm;
+    }
+}
