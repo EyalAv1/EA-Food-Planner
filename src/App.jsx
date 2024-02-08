@@ -16,8 +16,6 @@ import { onAuthStateChanged } from 'firebase/auth';
 import { useGetDailyCalories } from './hooks/useGetDailyCalories.js';
 import { useGetUserInfo} from './hooks/useGetUserInfo.js';
 
-// const UserTotalCalories = 1500;
-
 
 function App() {
 
