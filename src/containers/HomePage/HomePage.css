@@ -137,20 +137,17 @@
     .about_me_container_content {
         padding-left: 20px;
         text-decoration: underline;
-        color: #C35F5F;
+        color: #a73c3c;
+        align-items: center;
+        justify-content: center;
+        display: flex
     }
-
-    /* .cintainer a {
-        color: inherit;
-        -webkit-text-stroke: 2px #670505;
-        text-decoration: none;
-    } */
-    
     .about_me_outline {
         box-shadow: 0 0 15px 0 rgba(64, 83, 76, 1) inset;
         margin-top: 10px;
         padding: 5px;
         border-radius: 1rem;
+        justify-content: center;
     }
     
     .about_me_container {
@@ -158,5 +155,6 @@
         align-items: center;
         text-align: left;
         padding-left: 20px;
-     }
+        justify-content: center;
+    }
 }
