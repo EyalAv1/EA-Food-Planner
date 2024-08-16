@@ -11,7 +11,7 @@ function Profile(props) {
     const navigate = useNavigate();
 
     useEffect(() => {
-        if(fb_auth.currentUser == null){
+        if (fb_auth.currentUser == null) {
             navigate('/');
         }
     });
@@ -20,19 +20,19 @@ function Profile(props) {
 
     const [dailyTotalCalories, setDailyTotalCalories] = useState(0);
 
-    if(fb_auth.currentUser != null){
-        const {userEmail, userID} = useGetUserInfo();
-        const { dailyCalories} = useGetDailyCalories(userID);
+    if (fb_auth.currentUser != null) {
+        const { userEmail, userID } = useGetUserInfo();
+        const { dailyCalories } = useGetDailyCalories(userID);
         const { updateDailyCalories } = useUpdateDailyCalories();
-    
+
         const [dailyCaloriesData] = dailyCalories;
         var calId = "";
         try {
-            if(dailyCalories){
-                const {userId, calories, id} = dailyCaloriesData;
+            if (dailyCalories) {
+                const { userId, calories, id } = dailyCaloriesData;
                 calId = id;
             }
-        } catch(err) { console.error(err);}
+        } catch (err) { console.error(err); }
 
         const updateForm = [
             <form className={classes.divUpdateCal}>
@@ -47,24 +47,25 @@ function Profile(props) {
             <h1>Your calorie goal has been updated</h1>
         ]
 
-    function updateCalories () {
-        if(confirm(`Are you sure you want update your calorie goal to ${dailyTotalCalories} ?`)){
-            updateDailyCalories(dailyTotalCalories, calId); 
-            setIsUpdatedCal(true);
-            setTimeout(()=> {
-                setIsUpdatedCal(false);
-            }, 3000);
+        function updateCalories() {
+            if (confirm(`Are you sure you want update your calorie goal to ${dailyTotalCalories} ?`)) {
+                updateDailyCalories(dailyTotalCalories, calId);
+                setIsUpdatedCal(true);
+                setTimeout(() => {
+                    setIsUpdatedCal(false);
+                }, 3000);
+            }
         }
-    }
-    return <>
-        <h1>{userEmail} Profile 🔥</h1>
-        <div className={classes.divContainer}>
-            <div className={classes.outline}>
-                <h2>Update your daily calorie goal:</h2>
-                {!isUpdatedCal? updateForm : updateMessage}
+        return <>
+            <h1>{userEmail} Profile 🔥</h1>
+            <h2>Your daily calories: {dailyCalories[0].calories}</h2>
+            <div className={classes.divContainer}>
+                <div className={classes.outline}>
+                    <h2>Update your daily calorie goal:</h2>
+                    {!isUpdatedCal ? updateForm : updateMessage}
+                </div>
             </div>
-        </div>
-    </>
+        </>
     }
 }
 

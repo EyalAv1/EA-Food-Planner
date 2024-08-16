@@ -109,14 +109,14 @@
 
     .outline{
         width: 300px;
-        background-color: #DB4444;
+        background-color: #F97B22;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         border-radius: 10px;
         padding: 10px;
-        border: 4mm ridge #BB2A2A;
+        border: 4mm ridge #c4621b;
     }
 
     .divContainer { 
