@@ -32,12 +32,12 @@ function Auth(props) {
 
     const logInForm = [
         <form action='' name='Log_In'>
-            <input onChange={(e) => {setEmail(e.target.value)}} type="email" placeholder="Email"/>
-            <input onChange={(e) => {setPassword(e.target.value)}} type="password" placeholder="Password" />
+            <input key={"LoginEmail"} onChange={(e) => {setEmail(e.target.value)}} type="email" placeholder="Email"/>
+            <input key={"LoginPassword"} onChange={(e) => {setPassword(e.target.value)}} type="password" placeholder="Password" />
             {/* <button onClick={(e) => {handleSignIn(e)}}>Log In</button> */}
 
-            <div className={classes.divbtn}>
-                <div className={`${classes.btn} && ${classes.btn_three}`} onClick={(e) => {handleSignIn(e)}}>
+            <div key={"LoginButtonOutline"} className={classes.divbtn}>
+                <div key={"LoginButtonWrapper"} className={`${classes.btn} && ${classes.btn_three}`} onClick={(e) => {handleSignIn(e)}}>
                     <span>Sign In</span>
                 </div>
             </div>

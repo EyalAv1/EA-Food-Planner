@@ -9,10 +9,12 @@ import { fb_auth } from '../../FirebaseConfig';
 
 function Profile(props) {
     const navigate = useNavigate();
-
+    // const { dailyCalories } = null
     useEffect(() => {
         if (fb_auth.currentUser == null) {
             navigate('/');
+        } else {
+            // dailyCalories = useGetDailyCalories(userID);
         }
     });
 
@@ -24,20 +26,22 @@ function Profile(props) {
         const { userEmail, userID } = useGetUserInfo();
         const { dailyCalories } = useGetDailyCalories(userID);
         const { updateDailyCalories } = useUpdateDailyCalories();
-
+        
         const [dailyCaloriesData] = dailyCalories;
         var calId = "";
+        var userCurrentDailyCalories = 0
         try {
             if (dailyCalories) {
                 const { userId, calories, id } = dailyCaloriesData;
                 calId = id;
+                userCurrentDailyCalories = calories;
             }
         } catch (err) { console.error(err); }
 
         const updateForm = [
             <form className={classes.divUpdateCal}>
-                <input placeholder='Calories Goal' type='number' onChange={(e) => setDailyTotalCalories(e.target.value)} required />
-                <div className={classes.divbtn}>
+                <input key={"caloriesInput"} placeholder='Calories Goal' type='number' onChange={(e) => setDailyTotalCalories(e.target.value)} required />
+                <div key={"confirmButton"} className={classes.divbtn}>
                     <div className={`${classes.btn} && ${classes.btn_one}`} onClick={updateCalories}><span>Update</span></div>
                 </div>
             </form>
@@ -58,7 +62,7 @@ function Profile(props) {
         }
         return <>
             <h1>{userEmail} Profile 🔥</h1>
-            <h2>Your daily calories: {dailyCalories[0].calories}</h2>
+            <h2>Your daily calories: {userCurrentDailyCalories}</h2>
             <div className={classes.divContainer}>
                 <div className={classes.outline}>
                     <h2>Update your daily calorie goal:</h2>
